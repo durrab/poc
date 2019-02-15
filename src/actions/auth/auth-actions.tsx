@@ -38,9 +38,8 @@ export const authRequestSuccess = (result:any) => {
 export const authRequestFailed = (error:any) => {
   return {
     type: actionTypes.AUTH_REQUEST_FAILED,
-    isLoading: true,
+    isLoading: false,
     isError: true,
-    status: error.message,
     error: error
   }
 }

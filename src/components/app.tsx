@@ -39,6 +39,7 @@ const mapStateToProps = (state) => {
     selectedRole : state.auth.selectedRole,
     selectedUser: state.auth.selectedUser,
     response: state.auth.response,
+    isError: state.auth.isError,
   }
 }
 
@@ -75,13 +76,13 @@ class App extends React.Component<any, AppProps> {
   }
 
   renderCurrentAction = ():any => {
-    const {response, isLoading, isError, status } = this.props;
+    const {response, isLoading, isError, status, error } = this.props;
 
   return(  <Container>
       <Row>
         <Col>
           {isLoading && <Alert key={1} variant={'primary'}>{status}</Alert>}
-          {isError && <Alert key={1} variant={'danger'}>{status}</Alert>}
+          {isError && <Alert key={1} variant={'danger'}>{error.message}</Alert>}
         </Col>
       </Row>
 
