@@ -15,7 +15,7 @@ export default class Optional extends React.Component {
             <Card>
                 <Card.Header>Optional Window</Card.Header>
                 <Card.Body>
-                  <Card.Title>Optional Windowt</Card.Title>
+                  <Card.Title>Optional Window</Card.Title>
                   <Card.Text>
                   This is just for demonstration...
                   </Card.Text>
