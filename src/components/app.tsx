@@ -93,7 +93,7 @@ class App extends React.Component<any, AppProps> {
             <Card.Body>
               <Card.Title>Please enter your username and select role</Card.Title>
               <Card.Text>
-                Walmart POC
+                 POC
               </Card.Text>
       <Form>
 
