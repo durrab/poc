@@ -1,5 +1,5 @@
 {
-  "name": "walmart-poc",
+  "name": "poc",
   "main": "webpack.config.js",
   "scripts": {
     "dev:dist": "webpack --mode development",
