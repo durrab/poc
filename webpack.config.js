@@ -2,21 +2,23 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
-    entry: './src/index.tsx',
-    mode: "development",
+    entry: ['babel-polyfill', './src/client/index.tsx'],
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
-    devtool: 'inline-source-map',
     devServer: {
-    contentBase: './dist'
+      port: 3000,
+      open: true,
+      proxy: {
+        '/api': 'http://localhost:8080'
+      }
     },
     plugins: [
       new CleanWebpackPlugin(['dist']),
       new HtmlWebpackPlugin({
-        title: 'Development',
-        template: 'index.html'
+        template: './public/index.html',
+        favicon: './public/favicon.ico'
       })
     ],
     resolve: {
