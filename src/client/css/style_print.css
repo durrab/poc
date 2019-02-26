@@ -1,0 +1,295 @@
+﻿/*-------General-------------*/
+*{
+  margin: 0;
+  padding: 0;
+ }
+   
+body
+{
+    font-family:"Trebuchet MS", Arial, Georgia;
+    font-size:14px;
+    background: #fff;
+}
+
+
+.shreHeader {
+    float: right;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+    width: 100px
+}
+
+.shreBorder {
+    margin-top: 20px;
+    height: 25px;
+    background-color: #65bbf9
+}
+
+
+#page_holder
+{
+	width:974px;
+    margin:0 auto;
+}
+
+
+#content_holder
+{
+ float:left;
+ width:100%;
+}
+
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+
+img 
+{
+    border:0;
+}
+
+a
+{
+  text-decoration:underline;
+}
+
+
+/*-------------------------------*/
+/*------------Home---------------*/
+
+#general_header
+{
+  float:left;
+  width:100%;
+  height:105px;
+}
+
+#general_logo
+{
+  float:left;
+  width:100%;
+  height:71px;
+  margin-top:15px;
+  background: transparent url('../images/print_logo.gif') 20px 8px no-repeat; 
+}
+
+#header_links,#nav_first,#referyes_second_nav,#referyes_left_div,#back_to_referrals,#general_footer,#account_sum_title
+ {
+   display:none;
+ }
+ 
+#referyes_right_div
+{
+  float:left;
+  width:690px;
+}
+
+.profile_tbl_holder
+{
+ float:left;
+ width:690px;
+ margin-top:0px;
+ margin-left:10px;
+ border:#DDDDDD solid 1px;
+}
+
+.profile_comments_holder
+{
+  float:left;
+  width:655px;
+  margin-top:5px;
+  padding:10px 0 8px 0;
+  position:relative;
+  left:18px;
+}
+
+#refer_group_tbl
+{
+ float:left;
+ width:100%;
+ color:#9E9FA0;
+}
+
+
+#refer_group_tbl tr
+{
+ background:transparent url('../images/free_jobs_bg.gif') left top repeat-x; 
+}
+
+#refer_group_tbl th
+{
+ background:#F5F5F5 url('../images/free_jobs_bg.gif') left top repeat-x; 
+ padding:6px 0px 5px 0px;
+ font-weight:normal; 
+}
+
+#refer_group_tbl td
+{
+ padding:10px 0px 10px 0px;
+ text-align:center;
+}
+
+.fin_table
+  {
+    margin:20px 0 30px 0;
+    font-size:14px;
+  }
+  
+.fin_table th
+  {
+    color:#302F00;
+  }
+  
+  
+#iframe_fake
+{
+ display:none;
+}
+
+/*-------------Invoice----------------------*/
+.invoice_all_holder
+  {
+     float:left;
+     width:665px;
+   }
+#invoice_header
+ {
+   float:left;
+   width:100%;
+   padding-bottom:21px;
+   background:transparent url('../images/print_logo.gif') left 22px no-repeat;
+ }
+ 
+#invoice_word
+ {
+   float:left;
+   width:100%;
+   text-align:right;
+   font-size:36px;
+   margin-top:35px;
+   font-family:Georgia;
+   color:#858585;
+ }
+ 
+.no_bg
+ {
+   background:0px;
+ }
+ 
+#invoice_info_holder
+  {
+   float:left;
+   width:100%;
+   font-size:14px;
+   font-family:Trebuchet MS;
+   border:1px solid #C4C4C4;
+  }
+  
+.invoice_info_inner
+  {
+   float:left;
+   width:662px;
+   position:relative;
+   left:15px;
+   margin-top:10px;
+  }
+  
+.invoice_inner_left
+  {
+   float:left;
+   width:400px;
+  }
+  
+.invoice_inner_right
+  {
+   float:left;
+   position:relative;
+   left:20px;
+  }
+  
+ #invoice_table
+  {
+    float:left;
+    width:661px;
+  }
+  
+ #invoice_table tr
+  {
+    background:transparent url('../images/free_jobs_bg.gif') left top repeat-x;
+  }
+  
+ #invoice_table th
+  {
+     padding:10px 0 7px 0;
+     background:#ECECEC url('../images/free_jobs_bg.gif') left top repeat-x;
+  }
+  
+ #invoice_table td
+  {
+     text-align:center;
+     padding:10px 0 7px 0;
+  }
+  
+ #sub_total_div
+  {
+    float:left;
+    width:98%;
+    margin-top:-4px;
+    padding-top:22px;
+    border-right:solid 1px #DEDEDE;
+  }
+  
+ .sub_total_numbers
+  {
+    text-align:left;
+    padding-left:40px;
+  }
+  
+/*-----------Request Payment-----------------*/
+#welcome_span,#logout_span,#pop_up_error
+ {
+   display:none;
+ }
+
+#refer_people_inner
+{
+  float:left;
+  width:665px;
+  left:0px;
+  padding:0px;
+}
+
+.account_inside
+{
+   margin-left:0px;
+   width:600px;
+}
+
+.print_post_inner
+ {
+   display:none;
+ }
+ 
+#search_frame
+ {
+   float:left;
+   width:900px;
+   height:3000px;
+   margin-top:0px;
+   border:solid 1px #A4A4A4;
+ }
+ 
+ #back_for_but
+ {
+    display:none;
+ }
+
+  
+
+

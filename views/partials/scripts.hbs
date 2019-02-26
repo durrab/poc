@@ -1,0 +1,31 @@
+<script type = "text/javascript">
+
+    function onSignIn(googleUser) {
+
+        var id_token = googleUser.getAuthResponse().id_token;
+
+		axios.post('/login',{
+			idtoken: id_token,
+		})
+		  .then(function (res) {
+		    console.log("response===> "+ JSON.stringify(res));
+				window.location = res.data.redirect_location;
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		  });
+
+        };
+</script>
+
+<!-- Remove in production -->
+<script type = "text/javascript">
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      }
+ </script>
+
+ 

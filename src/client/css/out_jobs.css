@@ -1,0 +1,250 @@
+﻿
+.lnk_refer_now
+ {
+   padding-top:2px;
+   text-align:center;
+   text-decoration:none;
+ }
+ 
+.offer_head
+ {
+   float:left;
+   width:100%;
+   padding:30px 0 50px 0; 
+ }
+ 
+.offer_head .orange
+ {
+   float:left;
+   width:100%;
+   text-align:center; 
+   color:#E79400;
+   font:bold 24px "Trebuchet MS";
+ }
+ 
+.offer_head .green
+ {
+   color:#A4C51D;
+   padding:5px 0 0 0;
+   font-size:36px;
+ }
+ 
+.offer_cont
+ {
+   float:left;
+   width:910px;
+   position:relative;
+   left:40px;
+   background: transparent url('../images/day_left.gif') left 80px no-repeat; 
+ }
+ 
+.offer_cont .left
+ {
+   float:left;
+   width:455px;
+ }
+ 
+.offer_cont .l_head
+ {
+   float:left;
+   width:100%;
+   font:bold 22px "Trebuchet MS";
+   color:#949494;
+ }
+ 
+.offer_cont .l_det
+ {
+   float:right;
+   width:300px;
+   color:#949494;
+   margin:45px 0 0 0;
+   position:relative;
+   left:0px;
+   font:bold 15px "Trebuchet MS";
+ }
+ 
+.l_det .head
+ {
+   float:left;
+   width:100%;
+   padding:0 0 7px 0;
+ }
+ 
+.l_det ul
+ {
+   float:left;
+   width:100%;
+ }
+ 
+.l_det li
+ {
+   list-style-type:none;
+   padding:0 0 10px 20px;
+   background: transparent url('../images/mng_src_yes.gif') left 3px no-repeat; 
+ }
+ 
+.l_det .orange
+ {
+   color:#E79400;
+ }
+ 
+.offer_cont .l_star
+ {
+   float:left;
+   width:100%;
+   font:normal 12px "Trebuchet MS";
+   padding:50px 0 10px 0;
+   color:#949494;
+ }
+ 
+.offer_cont .right
+ {
+   float:right;
+   width:438px;
+   border:solid 1px #C2C2C2;
+ }
+ 
+.offer_cont .in_cont
+ {
+   float:left;
+   width:400px;
+   margin:20px 0 0 0;
+   position:relative;
+   left:25px;
+ }
+ 
+.in_cont .head
+ {
+   float:left;
+   width:100%;
+   color:#A4C51D;
+   font-size:24px;
+   padding:0 0 20px 0;
+ }
+ 
+.in_cont .greybox
+ {
+   float:left;
+   width:100%;
+   font-size:16px;
+   font-weight:bold;
+   color:#A2A2A2;
+   background-color:#E7E7E7;
+ }
+ 
+.greybox span
+ {
+   float:left;
+   width:100%;
+   position:relative;
+   left:10px;
+   padding:2px 0 2px 0;
+ }
+ 
+.in_cont .orange
+ {
+   float:left;
+   width:100%;
+   color:#E79400;
+   font-size:16px;
+   font-weight:bold;
+   padding:15px 0 0px 0;
+ }
+ 
+.in_cont .red
+ {
+   float:left;
+   width:100%;
+   color:red;
+   font-size:14px;
+   visibility:hidden;
+   font-weight:bold;
+ }
+ 
+.in_cont .log_in
+ {
+   float:left;
+   width:100%;
+   padding:5px 0 0 0;
+ }
+ 
+.log_in span 
+ {
+   float:left;
+   width:100%;
+ }
+ 
+.log_in .txt
+ {
+   font-size:14px;
+   color:#A2A2A2;
+ }
+ 
+.log_in .in input
+ {
+   width:275px;
+   border:solid 1px #809DBC;
+ }
+ 
+.log_in .offer_cont
+ {
+   float:left;
+   width:178px;
+   left:0;
+   background: transparent url('../images/offer_cont.gif') left top no-repeat; 
+ }
+ 
+.offer_grant
+ {
+   float:right;
+   width:430px;
+   position:relative;
+   right:20px;
+ }
+ 
+.offer_upgrade
+ {
+   float:left;
+   width:239px;
+   height:62px;
+   position:relative;
+   left:90px;
+   background: transparent url('../images/offer_upgrade.gif') left top no-repeat; 
+ }
+ 
+.offer_go
+ {
+   float:right;
+   width:400px;
+   margin:-110px 0 0 0;
+   position:relative;
+   top:-70px;
+   right:12px;
+   display:none;
+ }
+ 
+.offer_go .welc
+ {
+   float:left;
+   width:100%;
+   font-size:16px;
+   color:#A2A2A2;
+   padding:0 0 20px 0;
+ }
+ 
+.offer_ajax
+ {
+   height:100px;
+   display:none;
+   background: transparent url('../images/ajax_loader.gif') center center no-repeat; 
+ }
+ 
+.home_lnk
+ {
+   float:left;
+   width:180px;
+   height:55px;
+   position:relative;
+   left:20px;
+ }
+ 

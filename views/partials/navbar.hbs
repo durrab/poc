@@ -1,0 +1,104 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a rel = "canonical" class="navbar-item" href="/">
+      <img src="static/img/logo.png" alt = "Ecstatic Logo">
+      <span class = 'navbar-logo-text has-text-purple is-size-5'><strong>Ecstatic</strong></span>
+    </a>
+
+    <a role="button" class="navbar-burger" data-target = "navMenu" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    
+    <div class="navbar-end">
+      <a class="navbar-item" href = '/why'>
+          🤔 Why?
+      </a>
+      <a class="navbar-item" href = 'https://medium.com/@EcstaticSchools'>
+          🔬 Research & Thoughts
+      </a>
+      <a class="navbar-item" href = '/#features'>
+          🤖 Features
+      </a>
+      <div class="navbar-item ">
+        <div class="buttons">
+          <a class="button has-bg-green has-text-white has-text-weight-bold button-cta" onclick="showModal()">
+            I'm Interested In A Pilot!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id = "request-demo-modal" class="modal">
+  <div class="modal-background" onclick = "closeModal()"></div>
+  <div class="modal-content has-text-centered">
+      <span class = 'is-size-5  has-text-black has-text-weight-semibold section-heading signup-heading'>
+        We Want To Work With You
+      </span>
+
+      <p class = 'is-pulled-center has-text-left'>Our pilot implementation is easy as pie. Just leave your info and we'll get back to you as soon as possible with more details on getting started.</p>
+
+
+      <div class = 'modal-form is-pulled-center has-text-centered'>
+        <form action="https://formspree.io/nilay@ecstatic.ai" method="POST""/>
+          <input type="text" name="Full Name" placeholder="Full Name" required>
+          <input type="text" name="Email or Phone Number" placeholder="Email or Phone Number" required>
+          <input type="text" name="School/District" placeholder="School/District" required>
+
+          <input type="submit" class="button has-bg-green has-text-white has-text-weight-semibold" style = "width: 90%; font-size: 1.25em" value = "I'm Interested In A Pilot!">
+        </form>
+      </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close" onclick="closeModal()"></button>
+</div>
+  
+
+<!-- Show/Hide Request Demo Modal -->
+<script type = "text/javascript">
+  
+  function showModal(){
+      var modal = document.getElementById("request-demo-modal");
+      modal.classList.add("is-active");
+  }
+
+  function closeModal(){
+      var modal = document.getElementById("request-demo-modal");
+      modal.classList.remove("is-active");
+  }
+
+</script>
+
+<!-- Mobile Navbar -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>

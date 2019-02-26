@@ -1,5 +1,11 @@
 {
   "name": "Refer Yes",
   "configPath": "/my/default/path",
-  "port": 8080
+  "port": 8085,
+  "mongodb_config": {
+    "url": "mongodb://referyes_admin:jamikhan1234@localhost:27017/referyes"
+  },
+  "mssqlserver_config": {
+    
+  }
 }
