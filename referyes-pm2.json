@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "referyes-app",
+            "script": "npm",
+            "args" : "run start"
+        }
+    ]
+}

@@ -2,11 +2,12 @@
 // and to keep it in the src/ directory.
 import * as ReactDOM from "react-dom";
 //import Hello from "./Hello";
-import App from "./components/app"
+import ReferYes from "./components/ReferYes"
 import * as React from "react";
 import {Provider as StoreProvider} from 'react-redux'
 import configureStore from './store/configureStore'
-
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+//import './css/styles.css'
 export default class Main extends React.Component {
 
   constructor(props:any){
@@ -14,22 +15,29 @@ export default class Main extends React.Component {
   }
 
   componentDidMount() {
-
+    console.log('testing')
   }
 
   store = configureStore();
 
   render() : JSX.Element | any {
     return (
-      <StoreProvider store={this.store}>
-        <App/>
-      </StoreProvider>
+     
+        <StoreProvider store={this.store}>
+        
+        <Router>
+              <Route path="/" component={ReferYes}/>
+          </Router>
+        
+          
+        </StoreProvider>
     )
   }
 
 }
 
 ReactDOM.render(
-  <Main/>,
+      <Main/>   
+    ,
   document.getElementById("root")
 );

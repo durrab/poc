@@ -7,7 +7,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var exphbs = require('express-handlebars');
 var layouts = require('handlebars-layouts');
-var AppUtils = require('./utils/Utils');
+var AppUtils = require('./utils/DBUtils')
+var usersRouter = require('./routes/user');
 
 var conf = require("config");
 
@@ -21,35 +22,39 @@ app.use(express.static("dist"));
 app.use(express.static('public'));
 
 
-app.get("/api/getUsername", (req, res) => {
-  console.log("mongo db : " + AppUtils.getMongoDb());
-  AppUtils.getMongoDb().then( db => {
-    var dbo = db.db("referyes");
-    dbo.collection("user_profiles").find({}).toArray( (err, result) => {
-      if (err) throw err;
-      console.log(result.name);
-      db.close();
-      res.send(result);
-    });
-  });
-  //res.send({ username: os.userInfo().username })
+app.get("/api/getUsername", async (req, res) => {
+  
+  //console.log("mongo db : " + AppUtils.getMongoDb());
+ var db = await AppUtils.getMongoDb();
+ var dbo = await db.db("referyes");
+ var collection = await dbo.collection("user_profiles").find({});
+ var result = await collection.toArray();
+ db.close();
+ var rows =  await AppUtils.authenticate('Pragya.Sharma2201@gmail.com', '225.5265.5328325.5340.5353348363328215.5220.5');
+ res.send(rows);
 });
 
 app.get('/home', (req, res) => {
-  console.log('DIRNAME ' + __dirname );
    res.render('home');
 });
+
+app.get('/view/*', (req, res) => {
+  res.render('home');
+})
+app.get('/', (req, res) => {
+  res.render('home');
+})
 
 // view engine setup
 var hbs = exphbs.create({
   defaultLayout: "layout",
-  extname: ".hbs",
+  extname: ".html",
   partialsDir: "views/partials/", // same as default, I just like to be explicit
   layoutsDir: "views/layouts/" // same as default, I just like to be explicit
 });
 layouts.register(hbs.handlebars, {});
-app.engine(".hbs", hbs.engine);
-app.set('view engine', '.hbs');
+app.engine(".html", hbs.engine);
+app.set('view engine', '.html');
 
 
 //middleware
@@ -57,11 +62,30 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-//app.use(express.static(path.join(__dirname, '/views')));
+
+//App Routes
+app.use('/user', usersRouter);
 
 
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
+console.log(`back-end server dirname  ${__dirname}`)
 
 
 app.listen(conf.get("port") || 8080, () =>
-  console.log(`Listening on port ${conf.get("port") || 8080}!`)
+  console.log(`Listening on port and dirName ${__dirname} ${conf.get("port") || 8080}!`)
 );

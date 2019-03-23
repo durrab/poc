@@ -1,5 +1,25 @@
 {
   "name": "Refer Yes",
   "configPath": "/my/default/path",
-  "port": 8081
+  "port": 8085,
+  "mongodb_config": {
+    "url": "mongodb://referyes_admin:jamikhan1234@localhost:27017/referyes"
+  },
+  "mssqlserver_config": {
+    "user": "sa",
+    "password": "jamikhan1234",
+    "server": "10.0.0.94",
+    "database": "ReferYes",
+    "port": 1433,
+    "dialect": "mssql",
+    "dialectOptions": {
+        "instanceName": "SQLEXPRESS"
+    },
+    "pool": {
+      "max": "10",
+      "min": "0",
+      "idleTimeoutMillis": "30000"
+    }
+  }
 }
+

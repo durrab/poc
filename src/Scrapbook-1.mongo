@@ -1,2 +1,4 @@
 
 db.user_profiles.find()
+
+db.user_profiles.insert({name:"Fariha Qamar", email: "fariha@gmail.com"})

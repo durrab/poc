@@ -7,7 +7,7 @@
     "outDir": "./dist/",
     "preserveConstEnums": true,
     "removeComments": true,
-    "target": "ES5",
+    "target": "es6",
     "moduleResolution": "node",
     "strictNullChecks": false,
     "noEmit": false,

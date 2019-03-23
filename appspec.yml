@@ -1,0 +1,30 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /usr/referyes
+    overwrite: true
+permissions:
+  - object: /usr/referyes/codedeploy
+    pattern: "*.sh"
+    owner: root
+    group: root
+    mode: 755
+    type:
+      - file
+hooks:
+  BeforeInstall:
+    - location: codedeploy/before_install.sh
+      timeout: 1200
+      runas: root
+  AfterInstall:
+    - location: codedeploy/after_install.sh
+      timeout: 1200
+  ApplicationStart:
+    - location: codedeploy/app_start.sh
+      timeout: 60
+      runas: root
+  ApplicationStop:
+    - location: codedeploy/app_stop.sh
+      timeout: 10
+      runas: root
