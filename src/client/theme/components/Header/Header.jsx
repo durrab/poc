@@ -15,6 +15,7 @@ import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 // core components
 import headerStyle from "../../assets/jss/material-kit-react/components/headerStyle.jsx";
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 
 class Header extends React.Component {
@@ -74,7 +75,7 @@ class Header extends React.Component {
       [classes.absolute]: absolute,
       [classes.fixed]: fixed
     });
-    const brandComponent = <Button className={classes.title}>{brand}</Button>;
+    const brandComponent = <img src={brand} height="60" width="100"></img>
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
@@ -137,7 +138,8 @@ Header.propTypes = {
     "transparent",
     "white",
     "rose",
-    "dark"
+    "dark",
+    "whiteWithNoShadow"
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,

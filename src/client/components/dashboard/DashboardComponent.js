@@ -6,6 +6,18 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import ReferYesComponent from './referyes/ReferYesComponent';
+import image from "../../theme/assets/img/bg7.jpg";
+import dashboardPageStyle from '../../theme/assets/jss/material-kit-react/views/dashboard.jsx'
+// @material-ui/icons
+import Face from "@material-ui/icons/Face";
+import Chat from "@material-ui/icons/Chat";
+import Build from "@material-ui/icons/Build";
+import Computer from "@material-ui/icons/Computer"
+import Home from "@material-ui/icons/HomeRounded"
+
+import CustomTabs from "../../theme/components/CustomTabs/CustomTabs.jsx";
+import Group from "@material-ui/icons/Group"
+import Info from "@material-ui/icons/Info"
 
 function TabContainer(props) {
 	return (
@@ -30,57 +42,95 @@ const styles = (theme) => ({
 		backgroundColor: '#4caf50'
 	},
 	indicator: {
-        backgroundColor: '#4caf50',
+        backgroundColor: '#FFFFFF',
       },
-      default_tabStyle:{
-        color: 'white',
-        fontSize:12,
-        backgroundColor: '4caf50',
-       }
+  default_tabStyle:{
+    color: 'white',
+    fontSize:12,
+    backgroundColor: '$FFFFFF',
+  }
 });
 
 class DashboardComponent extends React.Component {
-	state = {
-		value: 0
-	};
+  constructor(props) {
+    super(props);
+   // this.props.commonActions.toggleCardAnimation(false);
+  }
 
+  componentDidMount() {
+   
+  /*  setTimeout(
+     () => {
+      this.props.commonActions.toggleCardAnimation(true);
+     },
+      500
+    ); */
+
+
+  }
 	handleChange = (event, value) => {
 		this.setState({ value });
 	};
 
 	render() {
 		const { classes } = this.props;
-		const { value } = this.state;
+	
 
 		return (
-			<div className={classes.root}>
-				<AppBar position="static" variant="fullWidth" className={classes.appBar}>
-					<Tabs
-						
-						value={value}
-						onChange={this.handleChange}
-						classes={{
-							indicator: classes.indicator
-                        }}
-                    >
-						<Tab label="Sourcer" className={classes.default_tabStyle} />
-						<Tab label="Candidates" />
-						<Tab label="Post Jobs" />
-						<Tab label="Refer People" />
-						<Tab label="My Refer Yes" />
-					</Tabs>
-				</AppBar>
-				{value === 0 && <TabContainer>Sourcer Screen</TabContainer>}
-				{value === 1 && <TabContainer>Candidates Screen</TabContainer>}
-				{value === 2 && <TabContainer>Post Jobs Screen</TabContainer>}
-				{value === 3 && <TabContainer>Refer People Screen</TabContainer>}
-				{value === 4 && (
-					<TabContainer>
-						<ReferYesComponent />
-					</TabContainer>
-				)}
-			</div>
-		);
+      <div>
+         <div className={classes.container} style={{marginTop:124, maxWidth:'90vw'}}>
+					<CustomTabs
+          plainTabs={true}
+          headerColor="success"
+          tabs={[
+            {
+              tabName: "Sourcer",
+              tabIcon: Computer,
+              tabContent: (
+                <p className={classes.textCenter} style={{height:'90vh'}}>
+                 Sourcer contents
+                </p>
+              )
+            },
+            {
+              tabName: "My Candidates",
+              tabIcon: Chat,
+              tabContent: (
+                <p className={classes.textCenter}>
+                 my candidate contents
+                </p>
+              )
+            },
+            {
+              tabName: "Post Jobs",
+              tabIcon: Info,
+              tabContent: (
+                <p className={classes.textCenter}>
+                 post a job contents
+                </p>
+              )
+						},
+						{
+              tabName: "Refer People",
+              tabIcon: Group,
+              tabContent: (
+                <p className={classes.textCenter}>
+                 refer people contents
+                </p>
+              )
+						},
+						{
+              tabName: "My Refer Yes",
+              tabIcon: Home,
+              tabContent: (
+								<ReferYesComponent/>
+              )
+            }
+          ]}
+        />
+          </div>
+      </div>
+    );
 	}
 }
 
@@ -88,4 +138,4 @@ DashboardComponent.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(DashboardComponent);
+export default withStyles(dashboardPageStyle)(DashboardComponent);

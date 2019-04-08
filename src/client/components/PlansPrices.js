@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import PropTypes from "prop-types";
+import homePageStyle from '../assets/jss/homePage.jsx'
 
 const styles = theme => ({
   root: {

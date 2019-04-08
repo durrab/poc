@@ -22,7 +22,8 @@ const authenticationReducer = (state = initialState, action) => {
         case actionTypes.LOGIN_REQUEST_SUCCESS:
             return {
              ...state,
-             response: action.response
+             response: action.response,
+             user: action.response.data.user
             }
         case actionTypes.LOGIN_REQUEST_FAILED:
             return {

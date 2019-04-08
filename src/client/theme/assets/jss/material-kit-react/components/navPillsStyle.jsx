@@ -9,7 +9,7 @@ import {
 
 const navPillsStyle = theme => ({
   root: {
-    marginTop: "20px",
+    marginTop: "0px",
     paddingLeft: "0",
     marginBottom: "0",
     overflow: "visible !important"
@@ -74,7 +74,8 @@ const navPillsStyle = theme => ({
     color: "inherit"
   },
   contentWrapper: {
-    marginTop: "20px"
+    marginTop: "20px",
+    width:"100%"
   },
   primary: {
     "&,&:hover": {

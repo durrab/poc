@@ -43,8 +43,6 @@ module.exports = {
         app.get('/view/*', (req, res, next) => {
          
           res.render('home');
-
-
         })
 
       },

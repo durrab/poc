@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import PropTypes from "prop-types";
+import homePageStyle from '../assets/jss/homePage.jsx'
 
 const styles = theme => ({
   root: {
@@ -20,14 +21,19 @@ class Features extends React.Component {
     const { classes } = this.props;
     return (
     
-        <Paper className={classes.root} elevation={1}>
-          <Typography variant="h5" component="h3">
+  <div className={classes.root} elevation={1}>
+<Paper className={classes.paper}>
+<Grid container spacing={16}>
+<Typography variant="h5" component="h3">
             Features 
           </Typography>
           <Typography component="p">
             Features Contents
           </Typography>
-        </Paper>
+</Grid>
+</Paper>
+
+</div>
    
     );
   }
@@ -37,4 +43,4 @@ Features.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Features);
+export default withStyles(homePageStyle)(Features);

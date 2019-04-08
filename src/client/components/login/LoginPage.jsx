@@ -16,6 +16,7 @@ import * as loginActions from '../../actions/login/login-actions'
 import * as commonActions from '../../actions/common/common-actions'
 import LoginForm from './LoginForm.jsx'
 import DashboardComponent from '../dashboard/DashboardComponent'
+
 import {
   withRouter, Redirect
 } from 'react-router-dom'
@@ -67,10 +68,9 @@ class LoginPage extends React.Component {
   render() {
     const {cardAnimation, dashboard, authenticate, indicator, status, isError, response , classes,form, ...rest } = this.props;
     
-
-    
     return (
       <div>
+        
         {authenticate === false ? (  <div
           className={classes.pageHeader}
           style={{
@@ -79,18 +79,22 @@ class LoginPage extends React.Component {
             backgroundPosition: "top center"
           }}
         >
-          <div className={classes.container}>
+      
+
+        <div className={classes.container} style={{marginTop:70}}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={4}>
                 <Card className={classes[cardAnimation]}>
-                
                   <LoginForm indicator={indicator} status={status} isError={isError} classes={classes} onSubmit={this.handleSubmit}/>
                 </Card>
               </GridItem>
             </GridContainer>
           </div>
+     
+         
         
         </div>): (<DashboardComponent/>)}
+
       </div>
     );
   }
@@ -116,59 +120,4 @@ class LoginPage extends React.Component {
 
 }
 
-
-
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(loginPageStyle)(LoginPage));
-
-
-/*
-
-<form className={classes.form}>
-                    <CardHeader color="success" className={classes.cardHeader}>
-                      <h4>Login</h4>
-                     
-                    </CardHeader>
-                   <p> indicator goes here</p>
-                    <CardBody>
-                      <CustomInput
-                        labelText="Email..."
-                        id="email"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          type: "email",
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <Email className={classes.inputIconsColor} />
-                            </InputAdornment>
-                          )
-                        }}
-                      />
-                      <CustomInput
-                        labelText="Password"
-                        id="pass"
-                        
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          type: "password",
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <Icon className={classes.inputIconsColor}>
-                                lock_outline
-                              </Icon>
-                            </InputAdornment>
-                          )
-                        }}
-                      />
-                    </CardBody>
-                    <CardFooter className={classes.cardFooter}>
-                      <Button  color="warning" size="lg">
-                        Sign in
-                      </Button>
-                    </CardFooter>
-                  </form>
-
-*/

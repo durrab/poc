@@ -37,7 +37,7 @@ module.exports = {
               data =  await request.query(`select * from dbo.users where email='${userData.email}' and password='${userData.password}'`);
 
               if(data.recordset.length != 0){
-                return res.status(200).json({message: 'login was successfull', data: data})
+                return res.status(200).json({message: 'login was successfull', user: data.recordset[0]})
                
               }
               else{

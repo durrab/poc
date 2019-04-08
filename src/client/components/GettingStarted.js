@@ -5,29 +5,27 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import PropTypes from "prop-types";
+import homePageStyle from '../assets/jss/homePage.jsx'
 
-const styles = theme => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    height: '80vh',
-  },
-});
 
 class GettingStarted extends React.Component {
   render() {
     const { classes } = this.props;
     return (
      
-        <Paper className={classes.root} elevation={1}>
-          <Typography variant="h5" component="h3">
-           Getting Started
-          </Typography>
-          <Typography component="p">
-           Getting Started contents here
-          </Typography>
-        </Paper>
+      <div className={classes.root} elevation={1}>
+      <Paper className={classes.paper}>
+      <Grid container spacing={16}>
+      <Typography variant="h5" component="h3">
+                  Features 
+                </Typography>
+                <Typography component="p">
+                  Features Contents
+                </Typography>
+      </Grid>
+      </Paper>
+      
+      </div>
     )
   }
 }
@@ -36,4 +34,4 @@ GettingStarted.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(GettingStarted);
+export default withStyles(homePageStyle)(GettingStarted);

@@ -2,7 +2,7 @@
 // and to keep it in the src/ directory.
 import * as ReactDOM from "react-dom";
 //import Hello from "./Hello";
-import ReferYes from "./components/ReferYes"
+import ReferYes from "./components/ReferYes.jsx"
 import * as React from "react";
 import {Provider as StoreProvider} from 'react-redux'
 import configureStore from './store/configureStore'

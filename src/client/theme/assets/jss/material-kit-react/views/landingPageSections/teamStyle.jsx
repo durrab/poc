@@ -1,5 +1,5 @@
 import { cardTitle, title } from "../../../material-kit-react.jsx";
-import { cardTitle, title } from "../../../material-kit-react/imagesStyles.jsx"
+import imagesStyle from "../../../material-kit-react/imagesStyles.jsx"
 
 
 const teamStyle = {

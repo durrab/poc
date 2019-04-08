@@ -81,15 +81,17 @@ class NavPills extends React.Component {
       </Tabs>
     );
     const tabContent = (
-      <div className={classes.contentWrapper}>
+      <div className={classes.contentWrapper} style={{width:'auto'}}>
         <SwipeableViews
           axis={direction === "rtl" ? "x-reverse" : "x"}
           index={this.state.active}
           onChangeIndex={this.handleChangeIndex}
+          
+          
         >
           {tabs.map((prop, key) => {
             return (
-              <div className={classes.tabContent} key={key}>
+              <div className={classes.tabContent} key={key} style={{width:'100%'}}>
                 {prop.tabContent}
               </div>
             );
@@ -98,9 +100,9 @@ class NavPills extends React.Component {
       </div>
     );
     return horizontal !== undefined ? (
-      <GridContainer>
-        <GridItem {...horizontal.tabsGrid}>{tabButtons}</GridItem>
-        <GridItem {...horizontal.contentGrid}>{tabContent}</GridItem>
+      <GridContainer spacing={Number(8)}>
+        <GridItem {...horizontal.tabsGrid}  style={{width:'170px', zIndex:3}}>{tabButtons}</GridItem>
+        <GridItem {...horizontal.contentGrid} style={{width:'100%'}}>{tabContent}</GridItem>
       </GridContainer>
     ) : (
       <div>

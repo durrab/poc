@@ -79,7 +79,7 @@ class RegistrationComponent extends React.Component {
 				backgroundPosition: "top center"
 			  }}
 			>
-			  <div className={classes.container}>
+			  <div className={classes.container} style={{marginTop:70}}>
 
 		
 			<Grid
@@ -141,10 +141,8 @@ class RegistrationComponent extends React.Component {
       this.props.actions.indicator(true);
       this.props.actions.error(false);
 			this.props.actions.registrationRequest(data);
-
-		  console.log('Final values got here' + JSON.stringify(form.registrationForm.values));
 		}
-		console.log('On Submit called')
+	
 		}
 		
 

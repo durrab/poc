@@ -9,10 +9,10 @@ import Schedule from "@material-ui/icons/Schedule";
 import List from "@material-ui/icons/List";
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import NavPills from "components/NavPills/NavPills.jsx";
-import pillsStyle from "assets/jss/material-kit-react/views/componentsSections/pillsStyle.jsx";
+import GridContainer from "../../../components/Grid/GridContainer.jsx";
+import GridItem from "../../../components/Grid/GridItem.jsx";
+import NavPills from "../../../components/NavPills/NavPills.jsx"
+import pillsStyle from "../../../assets/jss/material-kit-react/views/componentsSections/pillsStyle.jsx"
 
 class SectionPills extends React.Component {
   render() {
@@ -120,7 +120,7 @@ class SectionPills extends React.Component {
               </GridItem>
               <GridItem xs={12} sm={12} md={12} lg={6}>
                 <NavPills
-                  color="rose"
+                  color="success"
                   horizontal={{
                     tabsGrid: { xs: 12, sm: 4, md: 4 },
                     contentGrid: { xs: 12, sm: 8, md: 8 }
